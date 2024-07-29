@@ -78,7 +78,7 @@ footer {
   padding: 1rem;
   overflow-y: scroll;
   height: 100%;
-  width: 90%;
+  width: 80%;
   max-width: 800px;
   margin-left: auto;
   background: #030615;
@@ -94,4 +94,17 @@ footer {
   border: none;
   outline: none;
   margin-right: auto;
+}
+
+@media (min-width: 640px){
+  .sidebar{
+    position: relative;
+    inset: unset;
+    min-width: 30%;
+    box-shadow: 0 0 40px 1px #030615;
+  }
+
+  .sidebarContents{
+    margin: unset;
+  }
 }
