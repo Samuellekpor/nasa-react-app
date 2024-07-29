@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
   background-color: #030615;
 
   font-synthesis: none;
@@ -22,6 +22,11 @@
 #root {
   min-height: 100vh;
   display: flex;
+  position: relative;
+}
+
+.imgContainer {
+  flex-direction: column;
 }
 
 .bgImage {
@@ -29,4 +34,22 @@
   height: 100%;
   flex: 1;
   object-fit: cover;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bgGradient {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, #030615, rgba(255,255,255,0));
 }
