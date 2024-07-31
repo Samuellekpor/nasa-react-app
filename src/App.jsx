@@ -26,21 +26,21 @@ function App() {
         console.log(error.message);
       }
     }
-    //fetchApiData()
+    fetchApiData()
     
   }, [])
   
   return (
     <>
-      {data ? (<Main />) : (
+      {data ? (<Main data={data} />) : (
         <div className="loadingState">
           <i className="fa-solid fa-spinner"></i>
         </div>
       )}
       {showModal && (
-        <SideBar handleToggleModal={handleToggleModal}/>
+        <SideBar data={data} handleToggleModal={handleToggleModal}/>
       )}
-      <Footer handleToggleModal={handleToggleModal} />
+      {data && <Footer data={data} handleToggleModal={handleToggleModal} />}
     </>
   )
 }
